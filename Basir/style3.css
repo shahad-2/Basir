@@ -19,7 +19,6 @@ body {
     min-height: 100vh;
 }
 
-/* شريط التنقل العلوي */
 .navbar {
     background: var(--pure-white);
     padding: 10px 8%;
@@ -49,7 +48,6 @@ body {
     color: var(--main-blue);
 }
 
-/* محتوى الصفحة الرئيسية */
 .container {
     max-width: 1000px;
     margin: 50px auto;
@@ -70,7 +68,6 @@ body {
     margin-bottom: 40px;
 }
 
-/* بطاقات الشرح */
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
