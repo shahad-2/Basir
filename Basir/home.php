@@ -1,6 +1,5 @@
 <?php
 session_start();
-// التحقق من أن المستخدم مسجل دخول، وإلا يرجعه لصفحة Basir.php
 if (!isset($_SESSION['user_id'])) {
     header("Location: Basir.php");
     exit();
@@ -31,7 +30,7 @@ if (!isset($_SESSION['user_id'])) {
     <div class="container">
         <div class="hero-section">
             <h1>مرحباً بك في نظام بصير</h1>
-            <p>منصة تقنية متطورة لتعزيز السلامة المرورية وسرعة الاستجابة للحوادث من خلال الربط المباشر مع الجهات المختصة.</p>
+            <p>منصة متطورة لتعزيز السلامة المرورية وسرعة الاستجابة للحوادث من خلال الربط المباشر مع الجهات المختصة.</p>
         </div>
 
         <div class="features-grid">
