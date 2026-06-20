@@ -2,13 +2,11 @@
 session_start();
 include 'db_config.php';
 
-// التحقق من تسجيل الدخول
 if (!isset($_SESSION['user_id'])) {
     header("Location: Basir.php");
     exit();
 }
 
-// جلب البلاغات من قاعدة البيانات وربطها بالمواقع والحالة
 $query = "SELECT a.report_id, a.report_time, l.city, l.district, l.nearest_landmark, rs.status_name 
           FROM Accidents a
           LEFT JOIN Locations l ON a.address_id = l.location_id
@@ -29,9 +27,9 @@ $reports = $stmt->fetchAll();
     <link rel="stylesheet" href="style3.css">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* تنسيقات إضافية مخصصة لصفحة البلاغات لضمان مظهر الألوان الجديدة */
+
         body {
-            background-color: #f4f9fb; /* لون خلفية سماوي فاتح جداً */
+            background-color: #f4f9fb; 
             margin: 0;
             display: block;
         }
@@ -55,7 +53,7 @@ $reports = $stmt->fetchAll();
             padding: 20px;
             margin-bottom: 20px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border-right: 6px solid #2c7da0; /* لون أزرق بصير */
+            border-right: 6px solid #2c7da0;
             transition: transform 0.2s;
         }
 
