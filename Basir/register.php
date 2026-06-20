@@ -28,7 +28,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>بصير - إنشاء حساب جديد</title>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* تنسيق مخصص لصفحة التسجيل فقط لضمان عدم خرابها */
         body {
             margin: 0;
             padding: 0;
