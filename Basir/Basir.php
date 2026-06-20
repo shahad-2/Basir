@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>بصير - تسجيل الدخول</title>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* التنسيقات هنا لضمان عملها فوراً */
+      
         :root {
             --main-blue: #2c7da0;
             --light-bg: #f0f7f9;
