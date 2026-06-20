@@ -2,7 +2,6 @@
 session_start();
 include 'db_config.php';
 
-// 1. التحقق من تسجيل الدخول
 if (!isset($_SESSION['user_id'])) {
     header("Location: Basir.php");
     exit();
@@ -11,7 +10,6 @@ if (!isset($_SESSION['user_id'])) {
 $user_id = $_SESSION['user_id'];
 $message = "";
 
-// 2. معالجة تحديث البيانات عند ضغط "حفظ"
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['update_profile'])) {
     $fullname = $_POST['fullname'];
     $phone = $_POST['phone'];
@@ -25,7 +23,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['update_profile'])) {
     }
 }
 
-// 3. جلب بيانات المستخدم الحالية
 $stmt = $conn->prepare("SELECT * FROM Users WHERE UserID = ?");
 $stmt->execute([$user_id]);
 $user = $stmt->fetch();
@@ -105,16 +102,14 @@ $user = $stmt->fetch();
 
     <script>
         function enableEditing() {
-            // تحويل الحقول لتكون قابلة للتعديل
+
             document.getElementById('fname').readOnly = false;
             document.getElementById('femail').readOnly = false;
             document.getElementById('fphone').readOnly = false;
             
-            // إخفاء زر التعديل وإظهار زر الحفظ
             document.getElementById('editBtn').style.display = 'none';
             document.getElementById('saveBtn').style.display = 'block';
             
-            // تركيز على أول حقل
             document.getElementById('fname').focus();
         }
     </script>
